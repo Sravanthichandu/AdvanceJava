@@ -1,0 +1,230 @@
+package ecommerce_db.dao;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import ecommerce_db.dto.Shop;
+import ecommerce_db.dto.Vendor;
+
+public class VendorDao {
+	
+    static VendorDao vdao = new VendorDao();
+	static Scanner scanner = new Scanner(System.in);
+	static Shop shop = new Shop();
+	Vendor v = new Vendor();
+	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("hamitha");
+	EntityManager em = emf.createEntityManager();
+	EntityTransaction et = em.getTransaction();
+	
+	//insert data into db
+	public void saveVendor(Vendor vendor)
+	{
+	   et.begin();
+	   em.persist(vendor);	
+	   et.commit();
+	   System.out.println("Data saved Successfully..");
+	}
+	
+	//login
+	public void loginVendor(String email,String password)
+	{
+	    Vendor vdb	=em.find(Vendor.class, v.getId());
+	    if(email.equalsIgnoreCase(vdb.getEmail()))
+	    {
+	    	if(password.equalsIgnoreCase(v.getPassword()))
+	    	{
+	    		System.out.println("Login SuccessFull");
+	    		System.out.println("Enter the Required Option : ");
+	    		System.out.println("1.ShopDetails\n2.Profile\n3.Exit");
+	    		int option = scanner.nextInt();
+	    		boolean isstart=true;
+	    		switch(option)
+	    		{
+	    	    	case 1:
+	    	    	{
+	    	    		VendorshopDetails();
+	    	    	}
+	    	    	break;
+	    	    	case 2:
+	    	    	{
+	    	    		ProfileVendor();
+	    	    	}
+	    	    	break;
+	    	    	case 3 :
+	    	    	{
+	    	    		isstart=false;
+	    	    	}
+	    		}
+	    		
+	    	}
+	    	else
+	    	{
+	    		System.out.println("Incorrect Password ");
+	    	}
+	    }
+	    else 
+	    {
+	    	System.out.println("Incorrect Email .Please Enter Valid Email Address");
+	    }
+	    
+	}
+
+	public void ProfileVendor() {
+		
+	}
+
+	public void VendorshopDetails() {
+		System.out.println("1.CreateShop\n2.UpdateShop\n3.DeleteShop\n4.FetchAllShops");
+		System.out.println("Choose the option : ");
+		int choise = scanner.nextInt();
+		switch(choise)
+		{
+	    	case 1 :
+	    	{
+	    		shopDetails();
+	    	}
+	    	break;
+	    	case 2 :
+	    	{
+	    		shopUpdate();
+	    	}
+	    	break;
+	    	case 3 :
+	    	{
+	    		deleteShop();
+	    	}
+	    	break;
+	    	case 4 :
+	    	{
+	    		fetchAllShops();
+	    	}
+	    	break;
+		}
+	}
+
+	public void fetchAllShops() {
+	
+		System.out.println("Enter Vendor Name to Fetch All the Shops : ");
+		String vendorName = scanner.next();
+		Shop shopfetch =em.find(Shop.class,shop.getShop_Id() );
+		if(vendorName.equalsIgnoreCase(shopfetch.getVendor_name()))
+		{
+			Query query = em.createQuery("select f from Shop s");
+			System.out.println(query.getResultList());
+			
+		}
+				
+
+	}
+
+	public void deleteShop() {
+		System.out.println("Enter ShopId to Delete Shop Details :  ");
+		int sid = scanner.nextInt();
+		vdao.removeShop(sid);
+		
+		
+	}
+	public void removeShop(int shopid)
+	{
+		Shop shopdb=em.find(Shop.class,shop.getShop_Id());
+		if(shopid==shopdb.getShop_Id())
+		{
+			et.begin();
+			em.remove(shopdb);
+			et.commit();
+		}
+		System.out.println("Shop Data Deleted SuccessFully...");
+		
+	}
+
+	public void shopUpdate()
+	{
+		System.out.println("Please Choose the below Option To Update Shop Data : ");
+		System.out.println("1.UpdateByShopName\n2.UpdateByShopLocation\n3.UpdateByVendorName");
+		int options = scanner.nextInt();
+		switch(options)
+		{
+	     	case 1 :
+	     	{
+	     		System.out.println("Enter Shop Id : ");
+	     		int shid = scanner.nextInt();
+	     		System.out.println("Enter shopName to update : ");
+	     		String shopname = scanner.next();
+	     		shop.setShop_name(shopname);
+	     	}
+	     	break;
+	     	case 2 :
+	     	{
+	     		System.out.println("Enter Shop Id : ");
+	     		int shid = scanner.nextInt();
+	     		System.out.println("please Enter Shop Location to Update");
+	     		String shLoc = scanner.next();
+	     		shop.setShop_location(shLoc);
+	     	}
+	     	break;
+	     	case 3 :
+	     	{
+	     		System.out.println("Enter Shop Id : ");
+	     		int shid = scanner.nextInt();
+	     		System.out.println("please Enter vendorName to Update :  ");
+	     		String shvendorName = scanner.next();
+	     		shop.setVendor_name(shvendorName);
+	     	}
+	     	break;
+	     	default :
+	     		System.out.println("Enter valid option to Update ...");
+	     		break;
+		}
+		UpdateShop(shop);
+		
+	}
+
+	public  void UpdateShop(Shop shop)
+	{
+		Shop shopdb = em.find(Shop.class, shop.getShop_Id());
+		if(shopdb!=null)
+		{
+			if(shop.getShop_name()==null)
+				shop.setShop_name(shopdb.getShop_name());
+			if(shop.getShop_location()==null)
+				shop.setShop_location(shopdb.getShop_location());
+			if(shop.getVendor_name()==null)
+				shop.setVendor_name(shopdb.getVendor_name());
+			if(shop.getShop_Id()==shopdb.getShop_Id())
+			{
+				et.begin();
+				em.merge(shop);
+				et.commit();
+			}	
+		}
+		else
+		{
+			System.out.println("Data is not Found to Update ");
+		}
+	}
+	public void shopDetails() {
+		System.out.println("Enter Shop Details : ");
+		System.out.println("Enter ShopName : ");
+		String sname = scanner.next();
+		System.out.println("Enter shopLocation : ");
+		String sloc = scanner.next();
+		System.out.println("Enter VendorName : ");
+		String sVendorname = scanner.next();
+		Shop shop = new Shop(sname,sloc,sVendorname);
+		vdao.shopSave(shop);
+		
+	}
+	public void shopSave(Shop shop)
+	{
+		em.persist(shop);
+		System.out.println("Shop Data Saved Successfully..");
+	}
+
+	
+}

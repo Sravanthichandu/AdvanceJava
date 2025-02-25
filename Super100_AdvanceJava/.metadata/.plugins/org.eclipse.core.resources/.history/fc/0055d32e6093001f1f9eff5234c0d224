@@ -1,0 +1,9 @@
+package hibernate.dto;
+
+public class Employee4 {
+
+	int id;
+	String name;
+	String email;
+	
+}

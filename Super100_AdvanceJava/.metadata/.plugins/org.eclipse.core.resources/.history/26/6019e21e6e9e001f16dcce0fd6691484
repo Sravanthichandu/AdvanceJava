@@ -1,0 +1,11 @@
+package spring_user.dto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class User1 {
+
+	private int id;
+	private String name,email,password;
+	@Autowired
+    PanCard card;
+}
