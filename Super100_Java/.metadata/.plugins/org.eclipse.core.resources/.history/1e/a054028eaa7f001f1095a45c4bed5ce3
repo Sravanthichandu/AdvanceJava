@@ -1,0 +1,33 @@
+package com;
+
+import java.util.Stack;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Stack sk = new Stack();
+		
+		//pushing elements into the stack
+		
+		sk.push(10);
+		
+		sk.pop();
+		for(int i=0;i<=sk.size()-1;i++)
+		{
+			System.out.println(sk);
+			System.out.println(sk.isEmpty());
+		}
+		
+	   /*Stack stack = new Stack();
+	   stack.push("Java");
+	   stack.push("Python");
+	   stack.push("C++");
+	   stack.push(50);
+	   
+	   while(!stack.isEmpty())
+	   {
+		   System.out.println(stack.pop());
+	   }*/
+}
+}

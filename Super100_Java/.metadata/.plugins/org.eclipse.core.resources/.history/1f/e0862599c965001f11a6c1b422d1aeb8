@@ -1,0 +1,14 @@
+package PracticeU;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		
+		Circle c = new Circle();
+		c.findingRadius();
+		Cyclinder c1 = new Cyclinder();
+		c1.cyclinderProperties();
+
+	}
+
+}

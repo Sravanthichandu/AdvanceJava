@@ -1,0 +1,17 @@
+package PracticeU;
+
+public class Cyclinder extends Circle
+{
+
+	int length=10;
+	int breadth=20;
+	int height=40;
+	
+	public void cyclinderProperties()
+	{
+		System.out.println("Length of the cyclinder : "+length);
+		System.out.println("breadth of the cyclinder : " +breadth);
+		System.out.println("radius of the Cyclinder : "+radius);
+	}
+	
+}

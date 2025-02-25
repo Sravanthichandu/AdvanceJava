@@ -1,0 +1,26 @@
+package FirstMethodPrograms;
+
+import java.util.Scanner;
+
+public class PrintingDigitsOneByOne {
+	
+	public static void PrintingDigitsOneByOne(int number)
+	{
+
+		for(int i=1;i<=number;i++)
+		{
+			System.out.println(i);
+		}
+	}
+
+	public static void main(String[] args) {
+	
+		Scanner  s = new Scanner(System.in);
+		System.out.println("Enter a number to print each digit one by one : ");
+		int number = s.nextInt();
+		PrintingDigitsOneByOne(number);
+		
+
+	}
+
+}

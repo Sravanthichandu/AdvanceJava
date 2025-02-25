@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Duplicate.java&apos; to &apos;ArrayPrograms/src/com&apos;&#x0D;&#x0A;- Original project: &apos;ArrayPrograms&apos;&#x0D;&#x0A;- Destination element: &apos;ArrayPrograms/src/com&apos;&#x0D;&#x0A;- Original element: &apos;com.Duplicate.java&apos;" description="Copy compilation unit" destination="/src&lt;com" element1="/src&lt;com{Duplicate.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1727350160295" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,7 @@
+Method Overloading --- creating multiple methods (same name)but differ in list of arguments
+
+Different ways of methods Overloading in Java
+
+1.Changing the no.of parameters.
+2.changing the Datatypes of the Arguments.
+3.changing the order of the parameters of methods.

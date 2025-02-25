@@ -1,0 +1,23 @@
+package com.java.oop;
+
+import java.util.Scanner;
+
+public class ArmstrongSeries {
+
+	public static void printingArmstrongSeries(int number) {
+		
+		
+	}
+	public static void main(String[] args)
+	{
+	    Scanner s = new Scanner(System.in);
+	System.out.println("Enter n series of armstrong series : ");
+	int n = s.nextInt();
+	for(int i=1;i<=n;i++)
+	{
+		printingArmstrongSeries(n)
+	}
+
+	}
+
+}

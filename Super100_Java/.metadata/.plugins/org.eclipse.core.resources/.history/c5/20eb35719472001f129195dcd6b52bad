@@ -1,0 +1,19 @@
+package com.BookProgram;
+
+import java.util.Random;
+
+public class Book {
+
+	int bookId;
+	String booktitle;
+	int bookCost;
+	int noOfPages;
+	String bookAuthor;
+	public static void main(String[] args) {
+		Random r = new Random();
+		int bookId=r.nextInt(9999);
+		System.out.println(bookId);
+
+	}
+	
+}

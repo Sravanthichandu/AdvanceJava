@@ -1,0 +1,6 @@
+package encapsulationprograms;
+
+public class EmployeeUser {
+
+	Empployee e = new Empployee("Kalyani","SoftwareEngineer","Hyderbad",9876543213l);
+}

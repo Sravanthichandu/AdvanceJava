@@ -1,0 +1,10 @@
+package PracticeU;
+
+public class Circle {
+
+	int radius=5;
+	public void radius()
+	{
+	   System.out.println("Radius of circle : "+3.14*5*5);
+	}
+}

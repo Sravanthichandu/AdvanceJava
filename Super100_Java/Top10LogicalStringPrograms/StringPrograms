@@ -1,0 +1,66 @@
+1.Reverse String
+2.Remove Duplicate chars
+3.Reverse Each word in String
+5.Find char Occurence
+6.Find Non Repeated Char
+7.Replace char with Occurrence
+8.Find Longest Substring
+9.Sort String Characters
+10.Remove Whitespaces in STring
+11.Remove special characters
+
+-----------------------------------------------------------------------------
+
+1.WA Java program to reverse a String
+I/p : hello
+o/p : olleh
+      4 ways to reverse a String
+      1.Using toCharArray() method
+      2.Using charAt(int index) method
+      3.Using java.lang.StringBuffer class provided reverse() method
+      4.Using java.lang.StringBuilder class Provided reverse() method
+      
+      String str = "hello"
+      
+      h  e l l o
+      0  1 2 3 4  --->to find length string have speecial method length()
+      
+      int length = str.length();
+      
+      using toCharArray()--- method return character Array
+      
+      char[] char = str.toCharArray();--->stores data in indexes
+      
+      we can read the data in reverse
+      
+      how to read the data from Array ? ---> based on Index
+      
+      char[4] = o;
+      char[3] = l;
+      char[2] = l;
+      char[1] = e;
+      char[0] = h;
+      
+      we can Access by using indexes 
+      now we can use loop to read in reverse
+      
+      for(int i= char.length-1;i>=0;i--)
+      {
+         System.out.println(char[i]);
+      } 
+      
+      Approach --2 
+      
+      Using charAt(int index) -- return object based on index
+      
+      for(int i=str.length-1;i>=0;i--)
+      {
+         System.out.print(charAt[i]);
+        
+      }
+      
+      Approach -3
+      
+      
+  
+       

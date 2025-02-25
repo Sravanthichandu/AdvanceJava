@@ -1,0 +1,43 @@
+package com;
+
+import java.util.Stack;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Stack sk = new Stack();
+		
+		//pushing elements into the stack
+		
+		sk.push(10);
+		sk.push(30);
+		sk.push(50);
+		sk.push(40);
+		sk.push(10);
+		sk.push(90);
+		sk.push(40);
+		sk.push(150);
+		sk.push(410);
+		sk.push(200);
+		sk.push(12);
+		sk.push(5);
+		
+		//peek -- return top of the element
+		
+		System.out.println("Fetch or Retrieve top of the Element :"+sk.peek());
+		System.out.println("Initial Capacity of stack : "+sk.capacity());
+		System.out.println("Size of stack :"+sk.size());
+		System.out.println("Searching an Element based on object :"+sk.search(12));
+		System.out.println("returns the object index : "+sk.lastIndexOf(40));
+		System.out.println("Checking stack is Empty : "+sk.empty());
+		//search 
+		
+		System.out.println("===================================================");
+		for(int i=0;i<sk.size()-1;i++)
+		{
+			System.out.println(sk.pop());
+		}
+
+}
+}

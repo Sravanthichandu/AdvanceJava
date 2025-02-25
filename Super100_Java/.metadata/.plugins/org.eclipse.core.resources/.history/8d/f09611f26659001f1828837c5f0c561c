@@ -1,0 +1,10 @@
+package FirstMethodPrograms;
+
+public class SumOfOddOfGivenNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

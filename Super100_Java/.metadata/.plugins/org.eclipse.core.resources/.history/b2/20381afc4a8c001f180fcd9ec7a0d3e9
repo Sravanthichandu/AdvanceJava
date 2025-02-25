@@ -1,0 +1,13 @@
+package com;
+
+import java.util.List;
+
+public class Demo1 {
+
+      public static void main(String[] args) {
+		
+    	  //easy way to create list in java and initiliaze
+    	  List<String> words = List.of("Apple","Mango","Grapes");
+    	  
+	}	
+}

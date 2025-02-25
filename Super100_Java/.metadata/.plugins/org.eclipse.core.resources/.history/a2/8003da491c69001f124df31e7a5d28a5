@@ -1,0 +1,13 @@
+package com.java.oop;
+
+public class ArmstrongSeries {
+
+	public static void printingArmstrongSeries() {
+		
+	}
+	public static void main(String[] args) {
+	
+
+	}
+
+}

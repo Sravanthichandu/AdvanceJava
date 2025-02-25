@@ -1,0 +1,23 @@
+package com;
+
+import java.util.Stack;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Stack sk = new Stack();
+		
+		//pushing elements into the stack
+		
+		sk.push(10);
+		sk.push(30);
+		sk.push(50);
+		sk.push(40);
+		
+		//peek -- return top of the element
+		
+		System.out.println(sk.peek());
+		
+}
+}

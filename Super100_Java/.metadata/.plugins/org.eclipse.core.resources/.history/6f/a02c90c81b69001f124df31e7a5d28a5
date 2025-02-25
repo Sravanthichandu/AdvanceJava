@@ -1,0 +1,27 @@
+package com.java.oop;
+
+import java.util.Scanner;
+
+public class FibonaccIEvenSeries {
+
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);	
+	System.out.println("Enter n number of even numbers : ");
+	int n = s.nextInt();
+		int a=0;
+		int b=1;
+		int sum=1;
+		for(int i=1;i<=n;i++)
+		{
+			if(sum%2!=0)
+			{
+				System.out.println(sum);
+			}
+			a=b;
+			b=sum;
+			sum=a+b;
+		}
+
+	}
+
+}

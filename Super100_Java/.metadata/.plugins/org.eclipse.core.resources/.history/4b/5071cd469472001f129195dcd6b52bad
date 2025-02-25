@@ -1,0 +1,10 @@
+package com.BookProgram;
+
+public class Book {
+
+	int bookId;
+	String booktitle;
+	int bookCost;
+	int noOfPages;
+	String bookAuthor;
+}

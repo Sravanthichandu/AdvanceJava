@@ -1,0 +1,20 @@
+Methods theory : 
+
+method is a block of code which is used to perform a task or operation
+
+method syntax:
+
+  //method head or method signature
+   access_specifier access_modifier return_type method_name(args/no args)
+   {
+   //method implementation or method body
+   }
+  
+ Types of methods -- 4 types
+ 1.Method without arguments and without return type
+ 2.Method without arguments  and with return type
+ 3.Method with arguments and with return type
+ 4.Method with argument and without return type
+
+ 
+ 

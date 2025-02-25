@@ -1,0 +1,44 @@
+package FirstMethodPrograms;
+
+import java.util.Scanner;
+
+public class PrintingPrimeNumbersBetween1to100 {
+	
+	public void PrintingPrimes(int start ,int end)
+	{
+		int count=0;
+		for(int i=start;i<=end;i++)
+		{
+			isPrime(i);
+
+		}
+	}
+	public static void isPrime(int number)
+	{
+		int count=0;
+		for(int i=1;i<=number;i++)
+		{
+			if(number%i==0)
+			{
+				count++;
+				if(count==2)
+				{
+					System.out.print(i+ ",");
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter a start range to print Prime numbers from 1 to 100 ");
+		int start = s.nextInt();
+		System.out.println("Enter a end range to print Prime numbers from 1 to 100 ");
+		int end = s.nextInt();
+		PrintingPrimeNumbersBetween1to100 printing = new PrintingPrimeNumbersBetween1to100 ();
+		printing.PrintingPrimes(start,end);
+
+	}
+
+}
