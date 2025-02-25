@@ -1,0 +1,15 @@
+package com.java.numberguessinggame;
+
+import java.util.Random;
+
+public class Computer {
+
+	static int target_input;
+	public static void main(String[] args) {
+		
+		   Random r = new Random();
+		   target_input = r.nextInt(10);	   
+	}
+   
+   
+}

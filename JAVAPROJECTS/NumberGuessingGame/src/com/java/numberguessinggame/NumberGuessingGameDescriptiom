@@ -1,0 +1,72 @@
+                                  Number guessing Game
+
+concepts include -- understanding loops, conditionals, random number, and user input 
+handling
+
+------------------------------------------------------------------------------------
+
+overview :
+
+1.number guessing game is a simple console-based game
+
+2.User selects number---based on specified range
+
+3.player goal----guess the number
+
+4.After guessing of player --- computer should telling the player 
+                               whether their guess is 
+                                ---->Too High
+                                ---->Too Low
+                                ---->Correct
+
+5.Game continue--------Until player guesses the correct number.
+
+------------------------------------------------------------------------------------
+
+Game Flow :
+
+
+1.Initilization :
+
+Game start by defining range ---- range should be customized
+
+computer select a target number (it selects a number with in a range using
+ 
+                                 random number generator)
+2.Player Input :
+
+player is prompted to enter the  number(integer) --- with in range
+
+Input validation -- implemented --player guess is valid number with in a range
+
+
+3.Feed Back Mechanism:
+
+After each guess of player ---- computer compares it with target number
+
+    1.If player guess is too high -- computer informs that player guess is 
+                                        greater than target number
+
+    2.If player guess is too Low --- computer informs that player guess is
+                                        less than the target number
+ 
+    3.If player guess is correct  ---computer congratulations to player 
+                                     game ends.
+
+------------------------------------------------------------------------------
+Instructions :
+
+ 1.Looping until success :
+
+       game repeats the guessing process  until the player guesses correctly
+
+       each time player uses the feedback to adjust their next guess
+
+2.End of the Game :
+
+       Once the correct number is guessed  ----
+       
+               the computer announces the player's success and may display
+               the number of attempts it took to guess the number correctly
+
+      and the computer offers the player the option to play again or exit

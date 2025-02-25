@@ -1,0 +1,40 @@
+package com.java.numberguessinggame;
+
+import java.util.Scanner;
+
+public class Player {
+
+	
+	public void playerInput()
+	{
+		int player_input;
+		Scanner s = new Scanner(System.in);
+		while(true)
+		{
+			System.out.println("Enter a number : ");
+			player_input = s.nextInt();
+			Computer c = new Computer();
+			if(player_input>Computer.target_input)
+			{
+				System.out.println("Your guess is greater than computer target ");
+				playerInput();
+			}
+			else if(player_input<Computer.target_input)
+			{
+				System.out.println("Your guess is Less than computer target ");
+				playerInput();
+			}
+			else if(player_input==Computer.target_input)
+			{
+				System.out.println("Your guess Correct !.. Congratulations");
+			}
+			break;
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		Player p = new Player();
+		p.playerInput();
+	}
+}
