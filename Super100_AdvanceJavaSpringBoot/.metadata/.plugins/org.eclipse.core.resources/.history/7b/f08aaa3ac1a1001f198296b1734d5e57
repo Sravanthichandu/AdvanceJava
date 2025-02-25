@@ -1,0 +1,13 @@
+package com.jsp.LoginPage.dto;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Component;
+
+@Component
+@EntityScan
+public class UserSpring {
+
+	private String Username;
+	private String Password;
+	
+}
