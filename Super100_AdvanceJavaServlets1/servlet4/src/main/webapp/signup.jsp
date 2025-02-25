@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <form action="save" method="post">
+   <label for="Name">Name : </label>
+   <input type="text" id = "Name"  placeholder="Enter Your Name " name="name" >
+   <br><br>
+   <label for="Email">Email : </label>
+   <input type="email" id = "Email"  placeholder="Enter Your Email " name="email" >
+   <br><br>
+   <label for="password">Password:</label>
+   <input type="password" id="password" placeholder="create password" name="pwd">
+   <br><br>
+   <label for="Phone">PhoneNumber :</label>
+   <input type="tel" id="Phone" placeholder="Enter Your PhoneNumber " name="phone">
+   <br><br>
+   <label>Age : </label>
+   <input type="number" name="age">
+   <br><br>
+   <label for="gender">Gender :</label>
+   <label>Male</label>
+   <input type="radio" value="male" name="gender">
+   <label>Female</label>
+   <input type="radio" value="female" name="gender">
+   <label>Others</label>
+   <input type="radio" value="others" name="gender">
+   <br><br>
+   <input type="submit" value="Submit">
+   
+   </form>
+   <br>
+   <br>
+   <a href="login.jsp">Login!</a>
+  
+</body>
+</html>

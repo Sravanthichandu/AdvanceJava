@@ -1,0 +1,30 @@
+package servlet2;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/save")
+public class SignUp extends GenericServlet
+{
+	public void service(ServletRequest req,ServletResponse res)
+	{
+		String name = req.getParameter("name");
+	    String email = req.getParameter("email");
+	    long phone = Long.parseLong(req.getParameter("phone"));
+	    int age = Integer.parseInt(req.getParameter("age"));
+	    
+	    System.out.println("name :"+name+"email :"+email+"Phonenumber :"+phone+"age :"+age );
+	    
+	    try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("DataSaved");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	}
+
+}
